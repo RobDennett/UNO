@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.808.4
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnoGameUI", "UnoGameUI\UnoGameUI.csproj", "{7B1171AA-5EE2-4154-9201-A95C15DEB342}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnoLibrary", "UnoLibrary\UnoLibrary.csproj", "{32D91DE8-4371-49AF-A9BC-A3957A5F967F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7B1171AA-5EE2-4154-9201-A95C15DEB342}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B1171AA-5EE2-4154-9201-A95C15DEB342}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B1171AA-5EE2-4154-9201-A95C15DEB342}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B1171AA-5EE2-4154-9201-A95C15DEB342}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32D91DE8-4371-49AF-A9BC-A3957A5F967F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32D91DE8-4371-49AF-A9BC-A3957A5F967F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32D91DE8-4371-49AF-A9BC-A3957A5F967F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32D91DE8-4371-49AF-A9BC-A3957A5F967F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {749C30C2-30C2-48BF-929A-0DF1FB5DA141}
+	EndGlobalSection
+EndGlobal
