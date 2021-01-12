@@ -78,7 +78,7 @@ namespace UnoGameUI
                     return;
                 }
 
-                if (Deck.drawPile.Count < 5)
+                if (Deck.drawPile.Count <= 12)
                 {
                     Deck.ShuffleDeck();
                 }
