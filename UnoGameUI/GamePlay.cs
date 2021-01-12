@@ -44,14 +44,14 @@ namespace UnoGameUI
                     DisplayToUser.UsersHand();
                     DisplayToUser.PlayDeck();
 
-                } while (specialCardPlayed == true);
+                    if (Deck.playerHand.Count == 0)
+                    {
+                        GameMessages.DisplayWin();
+                        isThereAWinner = true;
+                        return;
+                    }
 
-                if (Deck.playerHand.Count == 0)
-                {
-                    GameMessages.DisplayWin();
-                    isThereAWinner = true;
-                    return;
-                }
+                } while (specialCardPlayed == true);
 
                 do
                 {
@@ -68,15 +68,15 @@ namespace UnoGameUI
                     DisplayToUser.UsersHand();
                     DisplayToUser.PlayDeck();
 
-                } while (specialCardPlayed == true);
+                    if (Deck.computerHand.Count == 0)
+                    {
+                        DisplayToUser.UsersHand();
+                        GameMessages.DisplayLose();
+                        isThereAWinner = true;
+                        return;
+                    }
 
-                if (Deck.computerHand.Count == 0)
-                {
-                    DisplayToUser.UsersHand();
-                    GameMessages.DisplayLose();
-                    isThereAWinner = true;
-                    return;
-                }
+                } while (specialCardPlayed == true);
 
                 if (Deck.drawPile.Count <= 12)
                 {
