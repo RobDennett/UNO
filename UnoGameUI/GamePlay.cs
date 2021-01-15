@@ -24,8 +24,7 @@ namespace UnoGameUI
 
             do
             {
-                DisplayToUser.UsersHand();
-                DisplayToUser.PlayDeck();
+                DisplayToUser.CardInfo();
 
                 do
                 {
@@ -33,16 +32,15 @@ namespace UnoGameUI
                     int cardInPlayCheck = Deck.playDeck.Count - 1;
                     
                     Turns.PlayersTurn();
-                    DisplayToUser.UsersHand();
-                    DisplayToUser.PlayDeck();
+
+                    DisplayToUser.CardInfo();
 
                     if (cardInPlayCheck != Deck.playDeck.Count - 1)
                     {
                         specialCardPlayed = WasSpecialCardPlayed(Deck.computerHand, "The Computer");
                     }
 
-                    DisplayToUser.UsersHand();
-                    DisplayToUser.PlayDeck();
+                    DisplayToUser.CardInfo();
 
                     if (Deck.playerHand.Count == 0)
                     {
@@ -50,6 +48,8 @@ namespace UnoGameUI
                         isThereAWinner = true;
                         return;
                     }
+
+                    CheckDrawPile();
 
                 } while (specialCardPlayed == true);
 
@@ -65,23 +65,18 @@ namespace UnoGameUI
                         specialCardPlayed = WasSpecialCardPlayed(Deck.playerHand, "You");
                     }
 
-                    DisplayToUser.UsersHand();
-                    DisplayToUser.PlayDeck();
+                    DisplayToUser.CardInfo();
 
                     if (Deck.computerHand.Count == 0)
                     {
-                        DisplayToUser.UsersHand();
                         GameMessages.DisplayLose();
                         isThereAWinner = true;
                         return;
                     }
 
-                } while (specialCardPlayed == true);
+                    CheckDrawPile();
 
-                if (Deck.drawPile.Count <= 12)
-                {
-                    Deck.ShuffleDeck();
-                }
+                } while (specialCardPlayed == true);
 
             } while (isThereAWinner == false);
         }
@@ -116,6 +111,14 @@ namespace UnoGameUI
             }
 
             return false;
+        }
+
+        public static void CheckDrawPile()
+        {
+            if (Deck.drawPile.Count <= 5)
+            {
+                Deck.ShuffleDeck();
+            }
         }
     }
 }

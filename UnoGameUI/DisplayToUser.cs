@@ -5,6 +5,12 @@ namespace UnoGameUI
 {
     public class DisplayToUser
     {
+        public static void CardInfo()
+        {
+            UsersHand();
+            PlayDeck();
+        }
+
         public static void UsersHand()
         {
             Console.Clear();
