@@ -6,12 +6,26 @@ namespace UnoGameUI
     {
         static void Main(string[] args)
         {
-            GamePlay.GameSetUp();
+            bool playAgain;
+            do
+            {
+                Console.Clear();
 
-            GamePlay.Play();
+                GamePlay.GameSetUp();
+
+                GamePlay.Play();
+
+                playAgain = GetInfo.DoYouWantToPlayAgain();
+
+            } while (playAgain == true);
+
+            Console.WriteLine();
+            Console.WriteLine("THANKS FOR PLAYING!");
  
             Console.ReadLine();
         }
+
     }
+ 
 }
 

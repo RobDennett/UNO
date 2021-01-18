@@ -25,7 +25,7 @@ namespace UnoGameUI
                     isValidName = true;
                 }
 
-            } while (isValidName ==  false);
+            } while (isValidName == false);
         }
 
         public static int GetPlayerCardSelection()
@@ -36,6 +36,29 @@ namespace UnoGameUI
             int.TryParse(cardSelection, out int cardIndex);
 
             return cardIndex - 1;
+        }
+
+        public static bool DoYouWantToPlayAgain()
+        {
+            do
+            {
+                Console.WriteLine();
+                Console.Write("Do you want to play again? y/n: ");
+                string answer = Console.ReadLine();
+
+                if (answer.ToLower() == "y" || answer.ToLower() == "yes")
+                {
+                    return true;
+                }
+                else if (answer.ToLower() == "n" || answer.ToLower() == "no")
+                {
+                    return false;
+                }
+                else
+                {
+                    Console.WriteLine("That was not a valid answer. Please try again. ");
+                }
+            } while (true);
         }
     }
 }
