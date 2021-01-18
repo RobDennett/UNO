@@ -11,6 +11,8 @@ namespace UnoGameUI
             {
                 Console.Clear();
 
+                GamePlay.ClearCards();
+
                 GamePlay.GameSetUp();
 
                 GamePlay.Play();

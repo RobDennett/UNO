@@ -120,5 +120,14 @@ namespace UnoGameUI
                 Deck.ShuffleDeck();
             }
         }
+
+        public static void ClearCards()
+        {
+            Deck.mainDeck.Clear();
+            Deck.drawPile.Clear();
+            Deck.playDeck.Clear();
+            Deck.playerHand.Clear();
+            Deck.computerHand.Clear();
+        }
     }
 }
